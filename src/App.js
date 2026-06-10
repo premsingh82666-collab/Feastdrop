@@ -37,13 +37,6 @@ export default function App() {
   const delivFee = cart.length>0 ? cart[0].deliveryFee : 0;
   const grandTotal = cartTotal - discount + delivFee + 0.99;
 
-  async function handleLogin() {
-    try {
-      const r = await axios.post(API+"/login",{email:loginEmail,password:loginPass});
-      setUser(r.data.user); setScreen("home"); setAuthError("");
-    } catch(e){ setAuthError(e.response?.data?.error||"Login failed"); }
-  }
-
   async function handleSignup() {
     try {
       const r = await axios.post(API+"/register",{name:signupName,email:signupEmail,password:signupPass});
