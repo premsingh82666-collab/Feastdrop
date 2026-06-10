@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API = "http://localhost:3001/api";
 
-const restaurants = [
+ const restaurants = [
   { id:1, name:"Burger Palace", cuisine:"American", rating:4.8, deliveryTime:"20-30 min", deliveryFee:1.99, image:"🍔", bg:"#FFF3E0", menu:[{id:101,name:"Classic Burger",desc:"Beef patty, lettuce, tomato",price:8.99,emoji:"🍔"},{id:102,name:"BBQ Bacon Burger",desc:"Smoky BBQ sauce, bacon",price:10.99,emoji:"🥓"},{id:103,name:"Fries",desc:"Golden crispy fries",price:3.49,emoji:"🍟"},{id:104,name:"Milkshake",desc:"Vanilla or chocolate",price:4.99,emoji:"🥤"}]},
   { id:2, name:"Pizza Roma", cuisine:"Italian", rating:4.6, deliveryTime:"25-40 min", deliveryFee:2.49, image:"🍕", bg:"#FCE4EC", menu:[{id:201,name:"Margherita",desc:"Tomato, mozzarella, basil",price:11.99,emoji:"🍕"},{id:202,name:"Pepperoni",desc:"Extra pepperoni",price:13.99,emoji:"🍕"},{id:203,name:"Garlic Bread",desc:"Herb butter toast",price:4.49,emoji:"🥖"},{id:204,name:"Tiramisu",desc:"Italian dessert",price:5.99,emoji:"🍰"}]},
   { id:3, name:"Sushi Zen", cuisine:"Japanese", rating:4.9, deliveryTime:"30-45 min", deliveryFee:3.49, image:"🍣", bg:"#E8F5E9", menu:[{id:301,name:"Salmon Roll",desc:"Fresh salmon, avocado",price:12.99,emoji:"🍣"},{id:302,name:"Tuna Sashimi",desc:"6 slices premium tuna",price:14.99,emoji:"🐟"},{id:303,name:"Edamame",desc:"Steamed soybeans",price:3.99,emoji:"🫛"},{id:304,name:"Miso Soup",desc:"Japanese broth",price:2.99,emoji:"🍵"}]},
@@ -16,7 +16,6 @@ const steps = [{l:"Confirmed",i:"✅"},{l:"Preparing",i:"👨‍🍳"},{l:"On th
 export default function App() {
   const [screen, setScreen] = useState("login");
   const [user, setUser] = useState(null);
-  const [authMode, setAuthMode] = useState("login");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPass, setLoginPass] = useState("");
   const [signupName, setSignupName] = useState("");
@@ -383,3 +382,4 @@ export default function App() {
 
   return null;
 }
+
