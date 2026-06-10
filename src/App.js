@@ -111,7 +111,7 @@ export default function App() {
             <input style={S.input} placeholder="Email" value={loginEmail} onChange={e=>setLoginEmail(e.target.value)}/>
             <input style={S.input} type="password" placeholder="Password" value={loginPass} onChange={e=>setLoginPass(e.target.value)}/>
             {authError&&<div style={{color:"#FF4B2B",fontSize:13,marginBottom:10}}>{authError}</div>}
-            <button style={S.btn} onClick={()=>setScreen("menu")}>Log In</button>
+            <button style={S.btn} onClick={()=>setScreen("home")}>Log In</button>
           </>
         ):(
           <>
