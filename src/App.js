@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:3001/api";
+const API = "https://feastdrop-production.up.railway.app/api";
 
  const restaurants = [
   { id:1, name:"Burger Palace", cuisine:"American", rating:4.8, deliveryTime:"20-30 min", deliveryFee:1.99, image:"🍔", bg:"#FFF3E0", menu:[{id:101,name:"Classic Burger",desc:"Beef patty, lettuce, tomato",price:8.99,emoji:"🍔"},{id:102,name:"BBQ Bacon Burger",desc:"Smoky BBQ sauce, bacon",price:10.99,emoji:"🥓"},{id:103,name:"Fries",desc:"Golden crispy fries",price:3.49,emoji:"🍟"},{id:104,name:"Milkshake",desc:"Vanilla or chocolate",price:4.99,emoji:"🥤"}]},
