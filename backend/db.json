@@ -1,0 +1,168 @@
+{
+  "users": [
+    {
+      "id": 1781101763827,
+      "name": "Mahir",
+      "email": "mahir@test.com",
+      "password": "$2b$10$.4utQzN6WIE/lbxDcnyqj.r1LP5YZkMQml4grMzCm9SPEZXVJ6Ro6"
+    },
+    {
+      "id": 1781101763842,
+      "name": "Mahir",
+      "email": "mahir@test.com",
+      "password": "$2b$10$rVe2u1cWCUy3uHixff6Raetj1GS1/2J0MUERQr7E00326bKLZXqSm"
+    },
+    {
+      "id": 1781102202510,
+      "name": "Mahir",
+      "email": "kuchbhi@.com",
+      "password": "$2b$10$4jKV3ANqc2InSEMCdP4VkOb6HAf/TB0HRz5Fi5Tvh1eb.1.pWs/Ia"
+    },
+    {
+      "id": 1781102202514,
+      "name": "Mahir",
+      "email": "kuchbhi@.com",
+      "password": "$2b$10$oRAGflDgCZ.kz0tlyh2iAOadIvqWWPZBXncmkgXUUISMA8KLOm63u"
+    },
+    {
+      "id": 1781103701282,
+      "name": "Mahir",
+      "email": "mahir123",
+      "password": "$2b$10$95xkGQciXXS3R1IO/cVdUOhIpMpMOI8q3vur4aRhdA.kRGxSor7Qq"
+    },
+    {
+      "id": 1781110614249,
+      "name": "Mahir ",
+      "email": "mahir@best.com",
+      "password": "$2b$10$gQzjKfW1ESoL8O1FXseUS.4rUu11CGCdV3IOqa04t52vvnte97cdO"
+    },
+    {
+      "id": 1781110614254,
+      "name": "Mahir ",
+      "email": "mahir@best.com",
+      "password": "$2b$10$43tPD8a6ex08i3VRO81Jh.w0gTqzDbbWKR8WIbHgIYH5vvEvM7I7K"
+    },
+    {
+      "id": 1781110614255,
+      "name": "Mahir ",
+      "email": "mahir@best.com",
+      "password": "$2b$10$DzWW4HrAWqVRSATWzXn/ve61UnUiQGnlkYSNB/9Jzl/AZVrvLmyiy"
+    },
+    {
+      "id": 1781110614255,
+      "name": "Mahir ",
+      "email": "mahir@best.com",
+      "password": "$2b$10$.NHxOb1Dr3wZ2kzi457d0uY8kvtJc5Svgoxz7FhNkD1GGtiJHuJpK"
+    },
+    {
+      "id": 1781110614255,
+      "name": "Mahir ",
+      "email": "mahir@best.com",
+      "password": "$2b$10$eEfDsFp5m52pmX1ypql6yu7MVd6RaskXkpMUHoTWQyqHhUwJoGiJS"
+    },
+    {
+      "id": 1781110614256,
+      "name": "Mahir ",
+      "email": "mahir@best.com",
+      "password": "$2b$10$QAr1ZFKa6J8pGiHTuHXDgOJKohRWFC2Ga8iH3DQPGBXO2LY/ndkja"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1781103617167,
+      "userId": 1781102202510,
+      "cart": [
+        {
+          "id": 101,
+          "name": "Classic Burger",
+          "desc": "Beef patty, lettuce, tomato",
+          "price": 8.99,
+          "emoji": "🍔",
+          "qty": 1,
+          "restaurantName": "Burger Palace",
+          "deliveryFee": 1.99
+        }
+      ],
+      "total": 11.071000000000002,
+      "address": "Home",
+      "status": "confirmed",
+      "createdAt": "2026-06-10T15:00:17.167Z"
+    },
+    {
+      "id": 1781145174468,
+      "cart": [
+        {
+          "id": 101,
+          "name": "Classic Burger",
+          "desc": "Beef patty, lettuce, tomato",
+          "price": 8.99,
+          "emoji": "🍔",
+          "qty": 1,
+          "restaurantName": "Burger Palace",
+          "deliveryFee": 1.99
+        }
+      ],
+      "total": 11.071000000000002,
+      "address": "Home",
+      "status": "confirmed",
+      "createdAt": "2026-06-11T02:32:54.468Z"
+    },
+    {
+      "id": 1781161624903,
+      "cart": [
+        {
+          "id": 101,
+          "name": "Classic Burger",
+          "desc": "Beef patty, lettuce, tomato",
+          "price": 8.99,
+          "emoji": "🍔",
+          "qty": 1,
+          "restaurantName": "Burger Palace",
+          "deliveryFee": 1.99
+        }
+      ],
+      "total": 11.97,
+      "address": "Home",
+      "status": "confirmed",
+      "createdAt": "2026-06-11T07:07:04.903Z"
+    },
+    {
+      "id": 1781166893263,
+      "cart": [
+        {
+          "id": 201,
+          "name": "Margherita",
+          "desc": "Tomato, mozzarella, basil",
+          "price": 11.99,
+          "emoji": "🍕",
+          "qty": 1,
+          "restaurantName": "Pizza Roma",
+          "deliveryFee": 2.49
+        }
+      ],
+      "total": 15.47,
+      "address": "Home",
+      "status": "confirmed",
+      "createdAt": "2026-06-11T08:34:53.263Z"
+    },
+    {
+      "id": 1781167145484,
+      "cart": [
+        {
+          "id": 101,
+          "name": "Classic Burger",
+          "desc": "Beef patty, lettuce, tomato",
+          "price": 8.99,
+          "emoji": "🍔",
+          "qty": 4,
+          "restaurantName": "Burger Palace",
+          "deliveryFee": 1.99
+        }
+      ],
+      "total": 38.940000000000005,
+      "address": "Home",
+      "status": "confirmed",
+      "createdAt": "2026-06-11T08:39:05.484Z"
+    }
+  ]
+}
