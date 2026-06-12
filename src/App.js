@@ -32,6 +32,28 @@ useEffect(() => {
     setScreen("home");
   }
 }, []);
+
+async function handleLogin() {
+  try {
+    const r = await axios.post(API + "/login", {
+      email: loginEmail,
+      password: loginPass
+    });
+
+    setUser(r.data.user);
+    localStorage.setItem("user", JSON.stringify(r.data.user));
+    setScreen("home");
+    setAuthError("");
+  } catch (e) {
+    setAuthError(e.response?.data?.error || "Login failed");
+  }
+}
+
+  if (savedUser) {
+    setUser(JSON.parse(savedUser));
+    setScreen("home");
+  }
+}, []);
   const [cart, setCart] = useState([]);
   const [coupon, setCoupon] = useState("");
   const [couponDiscount, setCouponDiscount] = useState(null);
