@@ -49,10 +49,13 @@ async function handleLogin() {
   }
 }
 
-  if (savedUser) {
-    setUser(JSON.parse(savedUser));
-    setScreen("home");
-  }
+  useEffect(() => {
+    const savedUser = localStorage.getItem("user");
+
+    if (savedUser) {
+        setUser(JSON.parse(savedUser));
+        setScreen("home");
+    }
 }, []);
   const [cart, setCart] = useState([]);
   const [coupon, setCoupon] = useState("");
