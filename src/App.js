@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const API = "https://feastdrop-production.up.railway.app/api";
@@ -23,7 +23,15 @@ export default function App() {
   const [signupPass, setSignupPass] = useState("");
   const [authError, setAuthError] = useState("");
   const [selRest, setSelRest] = useState(null);
-  const [tab, setTab] = useState("menu");
+const [tab, setTab] = useState("menu");
+useEffect(() => {
+  const savedUser = localStorage.getItem("user");
+
+  if (savedUser) {
+    setUser(JSON.parse(savedUser));
+    setScreen("home");
+  }
+}, []);
   const [cart, setCart] = useState([]);
   const [coupon, setCoupon] = useState("");
   const [couponDiscount, setCouponDiscount] = useState(null);
