@@ -317,8 +317,8 @@ async function handleLogin() {
             </div>
             <div style={{background:"#fff",borderRadius:14,padding:"4px 14px 10px",marginTop:12,boxShadow:"0 1px 6px rgba(0,0,0,0.05)"}}>
               <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Subtotal</span><span>${cartTotal.toFixed(2)}</span></div>
-              {discount>0&&<div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#22c55e"}}><span>Discount</span><span>-${discount.toFixed(2)}</span></div>}
-              <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Delivery + Service</span><span>${(delivFee+0.99).toFixed(2)}</span></div>
+              {discount>0&&<div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#22c55e"}}><span>Discount</span><span>-₹{discount.toFixed(2)}</span></div>}
+              <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Delivery + Service</span><span>₹{(delivFee+0.99).toFixed(2)}</span></div>
               <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0 0",fontSize:17,fontWeight:800,borderTop:"1.5px solid #eee",marginTop:4}}><span>Total</span><span>${grandTotal.toFixed(2)}</span></div>
             </div>
           </>
@@ -352,7 +352,7 @@ async function handleLogin() {
         </div>
         <div style={{background:"#fff",borderRadius:12,padding:"10px 14px",boxShadow:"0 1px 6px rgba(0,0,0,0.05)"}}>
           <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Subtotal</span><span>${cartTotal.toFixed(2)}</span></div>
-          {discount>0&&<div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#22c55e"}}><span>Discount</span><span>-${discount.toFixed(2)}</span></div>}
+          {discount>0&&<div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#22c55e"}}><span>Discount</span><span>-₹{discount.toFixed(2)}</span></div>}
           <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0 0",fontSize:17,fontWeight:800,borderTop:"1.5px solid #eee",marginTop:4}}><span>Total</span><span>${grandTotal.toFixed(2)}</span></div>
         </div>
       </div>
