@@ -197,7 +197,7 @@ async function handleLogin() {
                 <div style={{fontWeight:700,fontSize:13,color:"#FF4B2B"}}>⭐ {r.rating}</div>
               </div>
               <div style={{display:"flex",gap:12,marginTop:6,fontSize:12,color:"#888"}}>
-                <span>{r.cuisine}</span><span>🕐 {r.deliveryTime}</span><span>🛵 ${r.deliveryFee}</span>
+                <span>{r.cuisine}</span><span>🕐 {r.deliveryTime}</span><span>🛵 ₹{r.deliveryFee}</span>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ async function handleLogin() {
                 <div style={{flex:1,marginRight:12}}>
                   <div style={{fontWeight:600,fontSize:15}}>{item.name}</div>
                   <div style={{fontSize:12,color:"#999",marginTop:2}}>{item.desc}</div>
-                  <div style={{fontWeight:700,color:"#FF4B2B",fontSize:15,marginTop:4}}>${item.price.toFixed(2)}</div>
+                  <div style={{fontWeight:700,color:"#FF4B2B",fontSize:15,marginTop:4}}>₹{item.price.toFixed(2)}</div>
                 </div>
                 {qty===0?(
                   <button style={{background:"#FF4B2B",color:"#fff",border:"none",borderRadius:8,width:30,height:30,fontSize:20,cursor:"pointer"}} onClick={()=>addToCart(item,selRest)}>+</button>
@@ -271,7 +271,7 @@ async function handleLogin() {
       </div>
       {cartCount>0&&(
         <div style={S.bottomBar}>
-          <button style={S.btn} onClick={()=>setScreen("cart")}>View Cart · {cartCount} items · ${cartTotal.toFixed(2)}</button>
+          <button style={S.btn} onClick={()=>setScreen("cart")}>View Cart · {cartCount} items · ₹{cartTotal.toFixed(2)}</button>
         </div>
       )}
     </div>
@@ -297,13 +297,13 @@ async function handleLogin() {
           <>
             {cart.map(item=>(
               <div key={item.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"12px 0",borderBottom:"1px solid #f0f0f0"}}>
-                <div style={{flex:1}}><div style={{fontWeight:600,fontSize:15}}>{item.name}</div><div style={{color:"#aaa",fontSize:12}}>${item.price.toFixed(2)} each</div></div>
+                <div style={{flex:1}}><div style={{fontWeight:600,fontSize:15}}>{item.name}</div><div style={{color:"#aaa",fontSize:12}}>₹{item.price.toFixed(2)} each</div></div>
                 <div style={{display:"flex",alignItems:"center",gap:8}}>
                   <button style={S.qtyBtn} onClick={()=>removeFromCart(item.id)}>−</button>
                   <span style={{fontWeight:700,fontSize:15,minWidth:16,textAlign:"center"}}>{item.qty}</span>
                   <button style={S.qtyBtn} onClick={()=>addToCart(item,{name:item.restaurantName,deliveryFee:item.deliveryFee})}>+</button>
                 </div>
-                <div style={{marginLeft:14,fontWeight:700,minWidth:52,textAlign:"right"}}>${(item.price*item.qty).toFixed(2)}</div>
+                <div style={{marginLeft:14,fontWeight:700,minWidth:52,textAlign:"right"}}>₹{(item.price*item.qty).toFixed(2)}</div>
               </div>
             ))}
             <div style={{background:"#fff",borderRadius:14,padding:14,marginTop:16,boxShadow:"0 1px 6px rgba(0,0,0,0.05)"}}>
@@ -316,10 +316,10 @@ async function handleLogin() {
               {couponDiscount!==null&&<div style={{color:"#22c55e",fontSize:12,marginTop:6,fontWeight:600}}>✅ {couponDiscount===0?"Free delivery!":couponDiscount+"% discount applied!"}</div>}
             </div>
             <div style={{background:"#fff",borderRadius:14,padding:"4px 14px 10px",marginTop:12,boxShadow:"0 1px 6px rgba(0,0,0,0.05)"}}>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Subtotal</span><span>${cartTotal.toFixed(2)}</span></div>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Subtotal</span><span>₹{cartTotal.toFixed(2)}</span></div>
               {discount>0&&<div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#22c55e"}}><span>Discount</span><span>-₹{discount.toFixed(2)}</span></div>}
               <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Delivery + Service</span><span>₹{(delivFee+0.99).toFixed(2)}</span></div>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0 0",fontSize:17,fontWeight:800,borderTop:"1.5px solid #eee",marginTop:4}}><span>Total</span><span>${grandTotal.toFixed(2)}</span></div>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0 0",fontSize:17,fontWeight:800,borderTop:"1.5px solid #eee",marginTop:4}}><span>Total</span><span>₹{grandTotal.toFixed(2)}</span></div>
             </div>
           </>
         )}
@@ -351,12 +351,12 @@ async function handleLogin() {
           ))}
         </div>
         <div style={{background:"#fff",borderRadius:12,padding:"10px 14px",boxShadow:"0 1px 6px rgba(0,0,0,0.05)"}}>
-          <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Subtotal</span><span>${cartTotal.toFixed(2)}</span></div>
+          <div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#555"}}><span>Subtotal</span><span>₹{cartTotal.toFixed(2)}</span></div>
           {discount>0&&<div style={{display:"flex",justifyContent:"space-between",padding:"7px 0",fontSize:14,color:"#22c55e"}}><span>Discount</span><span>-₹{discount.toFixed(2)}</span></div>}
-          <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0 0",fontSize:17,fontWeight:800,borderTop:"1.5px solid #eee",marginTop:4}}><span>Total</span><span>${grandTotal.toFixed(2)}</span></div>
+          <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0 0",fontSize:17,fontWeight:800,borderTop:"1.5px solid #eee",marginTop:4}}><span>Total</span><span>₹{grandTotal.toFixed(2)}</span></div>
         </div>
       </div>
-      <div style={S.bottomBar}><button style={S.btn} onClick={placeOrder}>Place Order · ${grandTotal.toFixed(2)}</button></div>
+      <div style={S.bottomBar}><button style={S.btn} onClick={placeOrder}>Place Order · ₹{grandTotal.toFixed(2)}</button></div>
     </div>
   );
 
